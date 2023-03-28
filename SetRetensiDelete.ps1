@@ -26,6 +26,7 @@ function SetRetensiDeletes
                 ForEach($x_file in $p_file)
                 {
                     Remove-Item $x_file.FullName
+                    #Create log after deleting for tracing or troubleshooting
                     Add-Content D:\Database\log_backup_$(get-date -Format "yyyy_MM").log -Value "`n $(Get-Date -Format yyyy-MM-dd)|$(Get-Date -UFormat %T)|Deleted|$($x_file.FullName)"
                 }
             }
