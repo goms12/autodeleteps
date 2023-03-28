@@ -34,4 +34,5 @@ function SetRetensiDeletes
 }
 
 #Example for function
+#Delete files in #source 7 days old
 SetRetensiDeletes "\\192.168.XX.XX\backup$" "7" "yyyy_MM_dd"
